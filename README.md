@@ -1,10 +1,10 @@
-AI-Based Dustbin Management System
+**AI-Based Dustbin Management System**
 
 This project is an intelligent waste management system that integrates Artificial Intelligence (AI) to optimize the collection and monitoring of waste bins across different divisions and districts. It provides a login portal for corporate users and features AI capabilities for real-time monitoring and automated operations.
 
-Features
+**Features**
 
-1. User Authentication
+**1. User Authentication**
 
 Login portal for corporate users based on district, ID, and password.
 
@@ -12,7 +12,7 @@ Secure authentication system with role-based access.
 
 
 
-2. Division and Dustbin Management
+**2. Division and Dustbin Management**
 
 After login, users select the respective division to monitor.
 
@@ -20,7 +20,7 @@ AI detects the filling levels of assigned dustbins in real-time.
 
 
 
-3. AI Integration
+**3. AI Integration**
 
 Automated lid opening mechanism.
 
@@ -30,8 +30,7 @@ Location mapping of full/near-full dustbins for optimized vehicle dispatch.
 
 
 
-4. Backend & Frontend Frameworks
-
+****4. Backend & Frontend Frameworks**
 Frontend: EJS (Embedded JavaScript), CSS for UI/UX.
 
 Backend: Express.js for routing and API handling.
