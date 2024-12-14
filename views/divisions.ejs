@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Division</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Body styling */
+        
+        body {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            margin: 0;
+            height: 100vh;
+        }
+        /* Navbar styling */
+        
+        nav.navbar {
+            background-color: #333;
+            padding: 15px 20px;
+        }
+        
+        nav .navbar-brand {
+            color: #fff;
+            font-size: 1.5rem;
+        }
+        
+        nav .navbar-nav {
+            margin-left: auto;
+        }
+        
+        .navbar-nav .nav-item .nav-link {
+            color: #fff;
+            font-size: 1.1rem;
+        }
+        
+        .navbar-nav .nav-item .nav-link:hover {
+            color: #6a11cb;
+        }
+        /* Centered Card for Content */
+        
+        .content-card {
+            background-color: rgba(0, 0, 0, 0.7);
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        /* Title styling */
+        
+        .content-card h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        /* Form styling */
+        
+        .form-select {
+            border-radius: 5px;
+            border: 2px solid #ddd;
+            padding: 12px;
+            font-size: 1.1rem;
+            color: #333;
+            width: 100%;
+            transition: border-color 0.3s ease-in-out;
+        }
+        
+        .form-select:focus {
+            border-color: #6a11cb;
+            box-shadow: 0 0 5px rgba(106, 17, 203, 0.6);
+        }
+        /* Submit button */
+        
+        .btn-success {
+            background-color: #6a11cb;
+            border-color: #6a11cb;
+            padding: 12px 25px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        .btn-success:hover {
+            background-color: #2575fc;
+            border-color: #2575fc;
+        }
+        /* Footer */
+        
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        .footer a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        /* Responsive adjustments */
+        
+        @media (max-width: 768px) {
+            .content-card {
+                padding: 20px;
+            }
+            .content-card h2 {
+                font-size: 1.5rem;
+            }
+            .form-select,
+            .btn-success {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar with Logout Button -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Smart Dustbin Management</a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="content-card">
+        <h2>Select Division for
+            <%= district %>
+        </h2>
+
+        <!-- Form to select division -->
+        <form action="/division" method="post">
+            <div class="mb-3">
+                <label for="division" class="form-label">Select Division</label>
+                <select class="form-select" name="division" id="division" required>
+                    <option value="" disabled selected>Select a division</option>
+                    <% divisions.forEach(division => { %>
+                        <option value="<%= division.division_id %>"><%= division.division_name %></option>
+                    <% }); %>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success">Select Division</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Smart Dustbin Management | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
