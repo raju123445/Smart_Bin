@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background-color: #212121;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+        }
+
+        /* Contact Info Section */
+        .contact-info {
+            background-color: #757575;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .contact-info h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-info address {
+            font-style: normal;
+            margin: 20px 0;
+            font-size: 1.1rem;
+        }
+
+        /* Contact Form Section */
+        .contact-form {
+            background-color: #333;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .contact-form h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            background-color: #212121;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #121212;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .contact-info p,
+            .contact-info address,
+            .contact-form input,
+            .contact-form textarea {
+                font-size: 1rem;
+            }
+
+            .contact-form input,
+            .contact-form textarea {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>If you have any questions or inquiries, feel free to reach out to us.</p>
+        </div>
+    </header>
+
+    <!-- Contact Info Section -->
+    <section class="contact-info">
+        <div class="container">
+            <h2>Our Contact Details</h2>
+            <p><strong>Email:</strong> channabasavar9@gmail.com</p>
+            <p><strong>Phone:</strong> +91 9620188151</p>
+            <p><strong>Address:</strong> VTU CPGS Mysore</p>
+            <!-- <address>
+                <strong>Our Office Hours:</strong><br>
+                Monday to Friday: 9:00 AM - 6:00 PM<br>
+                Saturday: 10:00 AM - 2:00 PM<br>
+                Sunday: Closed
+            </address> -->
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <form action="/submit-contact" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required><br>
+                <input type="email" name="email" placeholder="Your Email" required><br>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea><br>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+
+</html>
