@@ -59,13 +59,13 @@ Python:
 
 AI algorithms for lid automation and fill-level detection.
 
-Libraries like OpenCV or TensorFlow (specify based on your implementation).
+Libraries like OpenCV and tensorflow.
 
 
 
 Database
 
-(Specify database used, e.g., MySQL, MongoDB, etc., if applicable).
+MySQL.
 
 
 
